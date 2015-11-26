@@ -1,0 +1,62 @@
+<div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td><h3><?php echo Mage::helper('adminhtml')->__($this->getTitle()) ?></h3></td><td class="form-buttons"><?php echo $this->getSaveButtonHtml() ?></td>
+        </tr>
+    </table>
+</div>
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4>
+            <?php echo $this->__('Selected Products') ?>
+        </h4>
+    </div>
+    <div class="fieldset">
+        <?php foreach($this->getProducts() as $product): ?>
+            <p><?php echo $product->getName() ?> (<?php echo $product->getSku() ?>)</p>
+        <?php endforeach ?>
+    </div>
+    <form action="<?php echo $this->getSaveUrl() ?>" method="post" id="storeviewcopy_form" enctype="multipart/form-data">
+        <input type="hidden" name="products" value="<?php echo implode(',', $this->getProductIds()) ?>" />
+        <?php echo $this->getBlockHtml('formkey') ?>
+        <div class="col2-set">
+            <div class="col-1" style="width: 48%; float: left;">
+                <div class="entry-edit-head">
+                    <h4>
+                        <?php echo $this->__('Source Store View') ?>
+                    </h4>
+                </div>
+                <div class="fieldset">
+                    <div class="form-list">
+                        <?php foreach ($this->getStores() as $store): ?>
+                            <p>
+                                <input type="radio" name="source_store" value="<?php echo $store->getId() ?>" id="source_store_<?php echo $store->getId() ?>" />
+                                <label for="source_store_<?php echo $store->getId() ?>"><?php echo $this->getFullStoreName($store) ?></label>
+                            </p>
+                        <?php endforeach ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2" style="width: 48%; margin-left: 4%; float: left; clear: none;">
+                <div class="entry-edit-head">
+                    <h4>
+                        <?php echo $this->__('Target Store View') ?>
+                    </h4>
+                </div>
+                <div class="fieldset">
+                    <div class="form-list">
+                        <?php foreach ($this->getStores() as $store): ?>
+                            <p>
+                                <input type="checkbox" name="target_store_<?php echo $store->getId() ?>" value="1" id="target_store_<?php echo $store->getId() ?>" />
+                                <label for="target_store_<?php echo $store->getId() ?>"><?php echo $this->getFullStoreName($store) ?></label>
+                            </p>
+                        <?php endforeach ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    var storeviewcopyForm = new varienForm('storeviewcopy_form');
+</script>

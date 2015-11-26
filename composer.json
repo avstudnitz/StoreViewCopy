@@ -1,0 +1,6 @@
+{
+   "name": "avstudnitz/storeviewcopy",
+   "type": "magento-module",
+   "description": "Copies product attribute data from one store view to another via massaction",
+   "homepage": "https://github.com/avstudnitz/StoreViewCopy"
+}

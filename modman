@@ -1,0 +1,4 @@
+src/app/code/community/AvS/StoreViewCopy                            app/code/community/AvS/StoreViewCopy
+src/app/design/adminhtml/default/default/template/storeviewcopy     app/design/adminhtml/default/default/template/storeviewcopy
+src/app/etc/modules/AvS_StoreViewCopy.xml                           app/etc/modules/AvS_StoreViewCopy.xml
+src/app/locale/de_DE/AvS_StoreViewCopy.csv                          app/locale/de_DE/AvS_StoreViewCopy.csv

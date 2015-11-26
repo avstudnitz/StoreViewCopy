@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<AvS_StoreViewCopy>
+			<version>0.1.0</version>
+		</AvS_StoreViewCopy>
+	</modules>
+
+	<global>
+        <models>
+			<storeviewcopy>
+				<class>AvS_StoreViewCopy_Model</class>
+			</storeviewcopy>
+        </models>
+        <blocks>
+			<storeviewcopy>
+				<class>AvS_StoreViewCopy_Block</class>
+			</storeviewcopy>
+		</blocks>
+        <helpers>
+            <storeviewcopy>
+                <class>AvS_StoreViewCopy_Helper</class>
+            </storeviewcopy>
+        </helpers>
+    </global>
+
+	<admin>
+        <routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<AvS_StoreViewCopy before="Mage_Adminhtml">AvS_StoreViewCopy</AvS_StoreViewCopy>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+
+    <adminhtml>
+		<translate>
+			<modules>
+				<AvS_StoreViewCopy>
+					<files>
+						<default>AvS_StoreViewCopy.csv</default>
+					</files>
+				</AvS_StoreViewCopy>
+			</modules>
+		</translate>
+        <events>
+            <adminhtml_block_html_before>
+                <observers>
+                    <storeviewcopy_product_grid>
+                        <type>singleton</type>
+                        <class>storeviewcopy/observer</class>
+                        <method>addMassactionToProductGrid</method>
+                    </storeviewcopy_product_grid>
+                </observers>
+            </adminhtml_block_html_before>
+		</events>
+    </adminhtml>
+</config>
