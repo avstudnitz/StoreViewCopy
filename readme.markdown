@@ -1,28 +1,19 @@
-AvS_ScopeHint
+AvS_StoreViewCopy
 =====================
-Displays a hint when a configuration value is overwritten on a lower scope (website or store view).
-Works for product and category attributes too (as of v0.3.0)
+Copies product attribute data from one store view to another via massaction
 
 Facts
 -----
-- version: 0.5.0
-- extension key: AvS_ScopeHint
-- [extension on Magento Connect](http://www.magentocommerce.com/magento-connect/scope-hint.html)
-- Magento Connect 1.0 extension key: `magento-community/AvS_ScopeHint`
-- Magento Connect 2.0 extension key: `http://connect20.magentocommerce.com/community/AvS_ScopeHint`
-- [extension on GitHub](https://github.com/avstudnitz/AvS_ScopeHint)
-- [direct download link](https://github.com/avstudnitz/AvS_ScopeHint/archive/master.tar.gz)
-- Composer key: `avstudnitz/scopehint` (via FireGento repository)
+- version: 0.1.0
+- extension key: AvS_StoreViewCopy
+- [extension on GitHub](https://github.com/avstudnitz/StoreViewCopy)
+- [direct download link](https://github.com/avstudnitz/StoreViewCopy/archive/master.tar.gz)
+- Composer key: `avstudnitz/storeviewcopy
 
 Description
 -----------
-Whenever a configuration setting is overwritten by a lower level website or store view, an icon is displayed.
-On Mouseover, a list of all stores / websites which overwrite the setting is shown with the respective values.
-See the [screenshot](http://www.avs-webentwicklung.de/fileadmin/modules/AvS_ScopeHint.png) to get an overview about what the module does.
-
-Works for category and product editing too.
-
-Now displays the configuration code (which is used for Mage::getStoreConfig) with the configuration fields.
+Select the products you want to have copied in the products grid. Then, choose "Copy StoreView Attributes" from the massaction
+menu. On the next screen, you can choose source and target store view.
 
 Requirements
 ------------
@@ -36,7 +27,7 @@ Compatibility
 
 Installation Instructions
 -------------------------
-1. Install the extension via Magento Connect with the key shown above or copy all the files into your document root.
+1. Copy all the files into your document root or use composer.
 
 Uninstallation
 --------------
@@ -44,7 +35,7 @@ Uninstallation
 
 Support
 -------
-If you have any issues with this extension, open an issue on [GitHub](https://github.com/avstudnitz/AvS_ScopeHint/issues).
+If you have any issues with this extension, open an issue on [GitHub](https://github.com/avstudnitz/StoreViewCopy/issues).
 
 Contribution
 ------------
@@ -64,4 +55,4 @@ Licence
 
 Copyright
 ---------
-(c) 2012-2013 Andreas von Studnitz
+(c) 2012-2015 Andreas von Studnitz
