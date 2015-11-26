@@ -8,7 +8,7 @@ Facts
 - extension key: AvS_StoreViewCopy
 - [extension on GitHub](https://github.com/avstudnitz/StoreViewCopy)
 - [direct download link](https://github.com/avstudnitz/StoreViewCopy/archive/master.tar.gz)
-- Composer key: `avstudnitz/storeviewcopy
+- Composer key: avstudnitz/storeviewcopy
 
 Description
 -----------
