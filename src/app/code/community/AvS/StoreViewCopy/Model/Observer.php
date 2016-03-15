@@ -17,7 +17,7 @@ class AvS_StoreViewCopy_Model_Observer
 	public function addMassactionToProductGrid($observer)
 	{
 		$block = $observer->getBlock();
-		if($block instanceof Mage_Adminhtml_Block_Catalog_Product_Grid){
+		if($block->getNameInLayout() === 'product.grid' && $block instanceof Mage_Adminhtml_Block_Widget_Grid){
 
             $block->getMassactionBlock()->addItem('copy_storeview', array(
                  'label'=> Mage::helper('storeviewcopy')->__('Copy StoreView Attributes'),
